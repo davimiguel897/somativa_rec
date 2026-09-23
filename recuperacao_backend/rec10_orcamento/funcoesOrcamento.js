@@ -2,17 +2,17 @@ function calcularMaoDeObra(horas) {
 const valorHora = 95;
 return horas * valorHora;
 }
-function calcularTotal(valorPecas, horas) {
-return valorPecas + calcularMaoDeObra(horas);
+function calcularTotal(valorMateriais, horas) {
+return valorMateriais + calcularMaoDeObra(horas);
 }
-function verificarGarantia(meses) {
-if (meses <= 6) {
-return 'EM GARANTIA';
+function verificarDesconto(total) {
+if (total >= 1000) {
+return 'DESCONTO DE 10%';
 }
-return 'FORA DA GARANTIA';
+return 'SEM DESCONTO';
 }
 module.exports = {
 calcularMaoDeObra,
 calcularTotal,
-verificarGarantia
+verificarDesconto
 };
